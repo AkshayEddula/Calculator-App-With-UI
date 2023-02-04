@@ -1,0 +1,68 @@
+.Head {
+  width: 50%;
+  color: white;
+}
+
+.N1 h1 {
+  margin-bottom: 0;
+}
+
+.M1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.N2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 21%;
+}
+.N2 h4 {
+  margin-bottom: 0px;
+}
+.themes {
+  display: flex;
+  flex-direction: column;
+}
+
+.M1-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 6px;
+  width: 55px;
+  padding-bottom: 5px;
+}
+
+.M1-a h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.H:hover {
+  cursor: pointer;
+}
+
+.M1-b {
+  background: hsl(223, 31%, 20%);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  width: 60px;
+  height: 15px;
+  padding: 5px;
+}
+
+.M1-b .H {
+  width: 16px;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 50%;
+}
+
+.M1-b .active {
+  width: 16px;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+}
