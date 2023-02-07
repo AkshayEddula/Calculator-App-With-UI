@@ -1,10 +1,10 @@
 import "../css/Input.css";
 
-function Input() {
+function Input(props) {
   return (
-    <div className="Input">
-      <input type={Number} />
-    </div>
+    <>
+      <input value={props.initialInput} readOnly></input>
+    </>
   );
 }
 

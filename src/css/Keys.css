@@ -28,6 +28,17 @@
   box-shadow: 5px 5px 0px hsl(6, 70%, 34%);
 }
 
+.K1 h1 {
+  font-size: 2.5rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: hsl(221, 14%, 31%);
+  margin: 20px;
+  box-shadow: 5px 5px 0px 0 hsl(28, 16%, 65%);
+  background: hsl(30, 25%, 89%);
+  cursor: pointer;
+}
+
 .K2 .Reset {
   cursor: pointer;
   padding: 20px 70px;
