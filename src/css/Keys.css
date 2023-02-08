@@ -1,13 +1,57 @@
+.themes1,
+.themes2 {
+  transition: background-color 0.5s ease-in;
+}
+
 .Keys {
-  background: hsl(223, 31%, 20%);
   width: 34%;
   margin: 20px;
   border-radius: 10px;
 }
 
+.themes1 {
+  background: hsl(223, 31%, 20%);
+}
+
+.themes2 {
+  background: hsl(0, 5%, 81%);
+}
+
 .K1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.K1 h1 {
+  font-size: 2.5rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.themes1 .K1 h1 {
+  color: hsl(221, 14%, 31%);
+  box-shadow: 5px 5px 0px 0 hsl(28, 16%, 65%);
+  background: hsl(30, 25%, 89%);
+}
+
+.themes2 .K1 h1 {
+  color: hsl(60, 10%, 19%);
+  box-shadow: 5px 5px 0px 0 hsl(35, 11%, 61%);
+  background: hsl(45, 7%, 89%);
+}
+
+.themes1 .K1 .DEL {
+  box-shadow: 5px 5px 0px 0 hsl(224, 28%, 35%);
+  background: hsl(225, 21%, 49%);
+  color: white;
+}
+
+.themes2 .K1 .DEL {
+  box-shadow: 5px 5px 0px 0 hsl(185, 42%, 37%);
+  background: hsl(185, 58%, 25%);
+  color: white;
 }
 
 .K2 {
@@ -24,19 +68,16 @@
   border-radius: 10px;
   font-size: 2.5rem;
   text-align: center;
+}
+
+.themes1 .K2 .Equal {
   background: hsl(6, 63%, 50%);
   box-shadow: 5px 5px 0px hsl(6, 70%, 34%);
 }
 
-.K1 h1 {
-  font-size: 2.5rem;
-  padding: 15px 20px;
-  border-radius: 10px;
-  color: hsl(221, 14%, 31%);
-  margin: 20px;
-  box-shadow: 5px 5px 0px 0 hsl(28, 16%, 65%);
-  background: hsl(30, 25%, 89%);
-  cursor: pointer;
+.themes2 .K2 .Equal {
+  background: hsl(25, 98%, 40%);
+  box-shadow: 5px 5px 0px hsl(25, 99%, 27%);
 }
 
 .K2 .Reset {
@@ -44,7 +85,15 @@
   padding: 20px 70px;
   font-size: 2.5rem;
   text-align: center;
-  background: hsl(225, 21%, 49%);
   border-radius: 10px;
+}
+
+.themes1 .K2 .Reset {
+  background: hsl(225, 21%, 49%);
   box-shadow: 5px 5px 0px hsl(224, 28%, 35%);
+}
+
+.themes2 .K2 .Reset {
+  background: hsl(185, 42%, 37%);
+  box-shadow: 5px 5px 0px hsl(185, 58%, 25%);
 }

@@ -8,11 +8,19 @@ input {
   text-align: right;
   font-family: "League Spartan";
   font-size: 3rem;
-  background: hsl(223, 31%, 20%);
   border: none;
-  color: #fff;
 }
 
 * :focus {
   outline: none;
+}
+
+.theme1 input {
+  background-color: hsl(223, 31%, 20%);
+  color: #fff;
+}
+
+.theme2 input {
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
 }

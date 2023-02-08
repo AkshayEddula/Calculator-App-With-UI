@@ -3,7 +3,11 @@ import "../css/Input.css";
 function Input(props) {
   return (
     <>
-      <input value={props.initialInput} readOnly></input>
+      <input
+        className={`theme${props.theme}`}
+        value={props.initialInput}
+        readOnly
+      ></input>
     </>
   );
 }

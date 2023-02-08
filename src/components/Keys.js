@@ -5,7 +5,7 @@ function Keys(props) {
   // let id = Math.floor(Math.random() * 100);
 
   return (
-    <div className="Keys">
+    <div className={`Keys themes${props.theme}`}>
       <div className="K1">
         <h1
           onClick={(e) => {

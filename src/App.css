@@ -1,7 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
+.theme1,
+.theme2 {
+  transition: background-color 0.5s ease-in;
+}
+
 .App {
   text-align: center;
   width: 100%;
   font-family: "League Spartan", sans-serif;
+}
+
+.theme1 {
+  background-color: hsl(222, 26%, 31%);
+}
+
+.theme2 {
+  background-color: hsl(0, 0%, 90%);
 }

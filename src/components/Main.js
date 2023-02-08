@@ -4,44 +4,44 @@ import Input from "./Input";
 import Keys from "./Keys";
 import { useState } from "react";
 
-function Main() {
+function Main({ theme, Settheme }) {
   // state for displaying the number in input field
-  const [initialInput, setInput] = useState(" ");
-
-  const [initialCalc, setCalc] = useState(0);
-
-  // click handler for number that clicked on the keypad
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState(0);
 
   const ClickHandler = (e) => {
     let numClicked = e.target.innerHTML;
-    setInput(initialInput + numClicked);
+    setInput(input + numClicked);
   };
 
   const AddHandler = (e) => {
-    let operator = e.target.innerHTML;
+    var operator = e.target.innerHTML;
     if (operator === "+") {
-      setCalc(initialCalc + parseInt(initialInput));
-      setInput(" ");
+      var firstNum = parseInt(input);
+      setResult(result + firstNum);
+      setInput("");
     }
   };
 
   const EqualHandler = () => {
-    setInput(initialCalc + parseInt(initialInput));
-    setCalc(parseInt(initialInput));
+    const newResult = result + parseInt(input);
+    setResult(newResult);
+    setInput(newResult);
   };
 
-  // reset handler for resetting the input feild
   const ResetHandler = () => {
-    setInput(" ");
-    setCalc(0);
+    setInput("");
+    setResult(0);
   };
 
   return (
     <div className="Main">
       {/* Renders every other components */}
-      <Head />
-      <Input initialInput={initialInput} />
+      <Head theme={theme} Settheme={Settheme} />
+      <Input theme={theme} initialInput={input} />
       <Keys
+        theme={theme}
+        Settheme={Settheme}
         AddHandler={AddHandler}
         EqualHandler={EqualHandler}
         ResetHandler={ResetHandler}

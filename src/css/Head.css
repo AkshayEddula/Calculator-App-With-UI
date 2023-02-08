@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 21%;
+  width: 16%;
 }
 .N2 h4 {
   margin-bottom: 0px;
@@ -32,7 +32,7 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 6px;
-  width: 55px;
+  width: 35px;
   padding-bottom: 5px;
 }
 
@@ -50,14 +50,13 @@
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
-  width: 60px;
+  width: 40px;
   height: 15px;
   padding: 5px;
 }
 
 .M1-b .H {
   width: 16px;
-  background-color: hsl(223, 31%, 20%);
   border-radius: 50%;
 }
 
@@ -65,4 +64,28 @@
   width: 16px;
   background-color: hsl(6, 63%, 50%);
   border-radius: 50%;
+}
+
+.theme1 {
+  color: white;
+}
+
+.theme2 {
+  color: hsl(60, 10%, 19%);
+}
+
+.theme1 .M1-b {
+  background: hsl(223, 31%, 20%);
+}
+
+.theme2 .M1-b {
+  background: hsl(0, 5%, 81%);
+}
+
+.theme1 .M1-b .active {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.theme2 .M1-b .active {
+  background-color: hsl(25, 98%, 40%);
 }
