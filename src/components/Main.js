@@ -7,31 +7,38 @@ import { useState } from "react";
 function Main({ theme, Settheme }) {
   // state for displaying the number in input field
   const [input, setInput] = useState("");
-  const [result, setResult] = useState(0);
+  const [result, setresult] = useState("");
 
-  const ClickHandler = (e) => {
-    let numClicked = e.target.innerHTML;
-    setInput(input + numClicked);
-  };
+  const ops = ["+", "-", "*", "/", "."];
 
-  const AddHandler = (e) => {
-    var operator = e.target.innerHTML;
-    if (operator === "+") {
-      var firstNum = parseInt(input);
-      setResult(result + firstNum);
-      setInput("");
+  // updates the value in the input feild
+  const updateInput = (value) => {
+    if (
+      (ops.includes(value) && input === "") ||
+      (ops.includes(value) && ops.includes(input.slice(-1)))
+    ) {
+      return;
+    }
+    setInput(input + value);
+
+    if (!ops.includes(value)) {
+      setresult(eval(input + value));
     }
   };
 
-  const EqualHandler = () => {
-    const newResult = result + parseInt(input);
-    setResult(newResult);
-    setInput(newResult);
+  // updates the value in the input field when = is clicked
+  const equalHandler = () => {
+    setInput(result.toString());
   };
 
+  // resets everything in the input field
   const ResetHandler = () => {
     setInput("");
-    setResult(0);
+  };
+
+  // deletes the last element in the input field
+  const deleteHandler = () => {
+    setInput(input.slice(0, -1));
   };
 
   return (
@@ -40,12 +47,12 @@ function Main({ theme, Settheme }) {
       <Head theme={theme} Settheme={Settheme} />
       <Input theme={theme} initialInput={input} />
       <Keys
+        DeleteHandler={deleteHandler}
+        ResetHandler={ResetHandler}
+        updateInput={updateInput}
+        equalHandler={equalHandler}
         theme={theme}
         Settheme={Settheme}
-        AddHandler={AddHandler}
-        EqualHandler={EqualHandler}
-        ResetHandler={ResetHandler}
-        ClickHandler={ClickHandler}
       />
     </div>
   );

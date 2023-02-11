@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
 .themes1,
 .themes2 {
   transition: background-color 0.5s ease-in;
@@ -7,6 +9,8 @@
   width: 34%;
   margin: 20px;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .themes1 {
@@ -17,83 +21,130 @@
   background: hsl(0, 5%, 81%);
 }
 
-.K1 {
+.K-a {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.K1 h1 {
+.K-a button {
   font-size: 2.5rem;
   padding: 15px 20px;
   border-radius: 10px;
   margin: 20px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
   cursor: pointer;
 }
 
-.themes1 .K1 h1 {
+.themes1 .K-a button {
   color: hsl(221, 14%, 31%);
   box-shadow: 5px 5px 0px 0 hsl(28, 16%, 65%);
   background: hsl(30, 25%, 89%);
 }
 
-.themes2 .K1 h1 {
+.themes2 .K-a button {
   color: hsl(60, 10%, 19%);
   box-shadow: 5px 5px 0px 0 hsl(35, 11%, 61%);
   background: hsl(45, 7%, 89%);
 }
 
-.themes1 .K1 .DEL {
-  box-shadow: 5px 5px 0px 0 hsl(224, 28%, 35%);
-  background: hsl(225, 21%, 49%);
-  color: white;
+.K1-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.themes2 .K1 .DEL {
-  box-shadow: 5px 5px 0px 0 hsl(185, 42%, 37%);
-  background: hsl(185, 58%, 25%);
-  color: white;
+.K1-1 button {
+  font-size: 2.5rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+
+.themes1 .K1-1 button {
+  color: hsl(221, 14%, 31%);
+  box-shadow: 5px 5px 0px 0 hsl(28, 16%, 65%);
+  background: hsl(30, 25%, 89%);
+}
+
+.themes2 .K1-1 button {
+  color: hsl(60, 10%, 19%);
+  box-shadow: 5px 5px 0px 0 hsl(35, 11%, 61%);
+  background: hsl(45, 7%, 89%);
 }
 
 .K2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5px;
+  display: grid;
+}
+
+.K2 button {
+  font-size: 2.5rem;
+  padding: 15px 0px;
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+
+.themes1 .K2 button {
   color: white;
-}
-
-.K2 .Equal {
-  cursor: pointer;
-  padding: 20px 100px;
-  border-radius: 10px;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.themes1 .K2 .Equal {
-  background: hsl(6, 63%, 50%);
-  box-shadow: 5px 5px 0px hsl(6, 70%, 34%);
-}
-
-.themes2 .K2 .Equal {
-  background: hsl(25, 98%, 40%);
-  box-shadow: 5px 5px 0px hsl(25, 99%, 27%);
-}
-
-.K2 .Reset {
-  cursor: pointer;
-  padding: 20px 70px;
-  font-size: 2.5rem;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.themes1 .K2 .Reset {
+  box-shadow: 5px 5px 0px 0 hsl(224, 28%, 35%);
   background: hsl(225, 21%, 49%);
-  box-shadow: 5px 5px 0px hsl(224, 28%, 35%);
 }
 
-.themes2 .K2 .Reset {
+.themes2 .K2 button {
+  color: hsl(60, 10%, 19%);
+  box-shadow: 5px 5px 0px 0 hsl(185, 58%, 25%);
   background: hsl(185, 42%, 37%);
-  box-shadow: 5px 5px 0px hsl(185, 58%, 25%);
+}
+
+.K3 {
+  width: 150%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.K3 button {
+  font-size: 2.5rem;
+  padding: 15px 0px;
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+
+.themes1 .K3 button {
+  color: hsl(60, 10%, 19%);
+  box-shadow: 5px 5px 0px 0 hsl(6, 70%, 34%);
+  background: hsl(6, 63%, 50%);
+}
+
+.themes2 .K3 button {
+  color: hsl(60, 57%, 66%);
+  box-shadow: 5px 5px 0px 0 hsl(25, 99%, 27%);
+  background: hsl(25, 98%, 40%);
+}
+
+@media (max-width: 600px) {
+  .Keys {
+    width: 65%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .K-a button,
+  .K1-1 button {
+    padding: 10px 15px;
+  }
+
+  .K2 button {
+    padding: 10px 0px;
+  }
+  .K3 {
+    width: 135%;
+  }
 }

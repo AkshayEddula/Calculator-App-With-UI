@@ -1,148 +1,40 @@
 import "../css/Keys.css";
-// const items = [7, 8, 9, "DEL", 4, 5, 6, "+", 1, 2, 3, "-", ".", 0, "/", "X"];
 
 function Keys(props) {
-  // let id = Math.floor(Math.random() * 100);
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  // function to display the digits on the key component
+  const displayNum = () => {
+    const digits = [];
+    for (let i = 0; i < items.length; i++) {
+      digits.push(
+        <button onClick={() => props.updateInput(items[i])} key={i}>
+          {items[i]}
+        </button>
+      );
+    }
+    return digits;
+  };
 
   return (
     <div className={`Keys themes${props.theme}`}>
       <div className="K1">
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          7
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          8
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          9
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="DEL num"
-        >
-          DEL
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          4
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          5
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          6
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.AddHandler(e);
-          }}
-          className="num"
-        >
-          +
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          1
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          2
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          3
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          -
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          .
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          0
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          /
-        </h1>
-        <h1
-          onClick={(e) => {
-            props.ClickHandler(e);
-          }}
-          className="num"
-        >
-          X
-        </h1>
+        <div className="K-a">{displayNum()}</div>
+        <div className="K1-1">
+          <button onClick={() => props.updateInput(0)}>0</button>
+          <button onClick={() => props.updateInput(".")}>.</button>
+          <button onClick={props.equalHandler}>=</button>
+        </div>
       </div>
       <div className="K2">
-        <h1 onClick={props.ResetHandler} className="Reset">
-          RESET
-        </h1>
-        <div onClick={props.EqualHandler} className="Equal">
-          =
-        </div>
+        <button onClick={() => props.updateInput("+")}>+</button>
+        <button onClick={() => props.updateInput("-")}>-</button>
+        <button onClick={() => props.updateInput("*")}>*</button>
+        <button onClick={() => props.updateInput("/")}>/</button>
+      </div>
+      <div className="K3">
+        <button onClick={props.ResetHandler}>RESET</button>
+        <button onClick={props.DeleteHandler}>DEL</button>
       </div>
     </div>
   );

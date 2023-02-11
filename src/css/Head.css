@@ -89,3 +89,14 @@
 .theme2 .M1-b .active {
   background-color: hsl(25, 98%, 40%);
 }
+
+@media (max-width: 600px) {
+  .Head {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .N2 {
+    width: 20%;
+  }
+}

@@ -24,3 +24,10 @@ input {
   background: hsl(0, 0%, 93%);
   color: hsl(60, 10%, 19%);
 }
+
+@media (max-width: 600px) {
+  input {
+    width: 55%;
+    font-size: 2rem;
+  }
+}
