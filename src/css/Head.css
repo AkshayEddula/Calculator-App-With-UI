@@ -100,3 +100,14 @@
     width: 20%;
   }
 }
+
+@media (max-width: 390px) {
+  .Head {
+    width: 130%;
+    margin: 10px;
+  }
+
+  .N2 {
+    width: 25%;
+  }
+}

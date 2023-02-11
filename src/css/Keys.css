@@ -148,3 +148,24 @@
     width: 135%;
   }
 }
+
+@media (max-width: 390px) {
+  .Keys {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .K-a button,
+  .K1-1 button {
+    padding: 10px 10px;
+    font-size: 1.5rem;
+  }
+
+  .K2 button {
+    padding: 10px 10px;
+    font-size: 1.5rem;
+  }
+  .K3 {
+    width: 135%;
+  }
+}

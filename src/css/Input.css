@@ -31,3 +31,10 @@ input {
     font-size: 2rem;
   }
 }
+
+@media (max-width: 390px) {
+  input {
+    width: 75%;
+    font-size: 2rem;
+  }
+}
